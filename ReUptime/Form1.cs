@@ -129,5 +129,9 @@ namespace ReUptime
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://nokersoft.com");
+        }
     }
 }

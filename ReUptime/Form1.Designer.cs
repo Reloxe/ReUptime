@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.url = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.url = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.interval = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.interval = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.startbuton = new System.Windows.Forms.Button();
             this.stopbuton = new System.Windows.Forms.Button();
@@ -43,9 +43,10 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.useragent = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,14 +71,6 @@
             this.panel1.Size = new System.Drawing.Size(226, 54);
             this.panel1.TabIndex = 1;
             // 
-            // url
-            // 
-            this.url.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.url.Location = new System.Drawing.Point(3, 23);
-            this.url.Name = "url";
-            this.url.Size = new System.Drawing.Size(220, 23);
-            this.url.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -88,6 +81,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "URL";
             // 
+            // url
+            // 
+            this.url.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.url.Location = new System.Drawing.Point(3, 23);
+            this.url.Name = "url";
+            this.url.Size = new System.Drawing.Size(220, 23);
+            this.url.TabIndex = 2;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
@@ -96,15 +97,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 64);
             this.panel2.TabIndex = 2;
-            // 
-            // interval
-            // 
-            this.interval.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.interval.Location = new System.Drawing.Point(3, 33);
-            this.interval.MaxLength = 40;
-            this.interval.Name = "interval";
-            this.interval.Size = new System.Drawing.Size(220, 23);
-            this.interval.TabIndex = 0;
             // 
             // label3
             // 
@@ -115,6 +107,15 @@
             this.label3.Size = new System.Drawing.Size(205, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Check interval (MS Format)";
+            // 
+            // interval
+            // 
+            this.interval.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.interval.Location = new System.Drawing.Point(3, 33);
+            this.interval.MaxLength = 40;
+            this.interval.Name = "interval";
+            this.interval.Size = new System.Drawing.Size(220, 23);
+            this.interval.TabIndex = 0;
             // 
             // button1
             // 
@@ -183,6 +184,14 @@
             this.panel3.Size = new System.Drawing.Size(226, 85);
             this.panel3.TabIndex = 8;
             // 
+            // useragent
+            // 
+            this.useragent.Location = new System.Drawing.Point(3, 25);
+            this.useragent.Name = "useragent";
+            this.useragent.Size = new System.Drawing.Size(220, 57);
+            this.useragent.TabIndex = 9;
+            this.useragent.Text = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -192,14 +201,6 @@
             this.label5.Size = new System.Drawing.Size(92, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "User-Agent";
-            // 
-            // useragent
-            // 
-            this.useragent.Location = new System.Drawing.Point(3, 25);
-            this.useragent.Name = "useragent";
-            this.useragent.Size = new System.Drawing.Size(220, 57);
-            this.useragent.TabIndex = 9;
-            this.useragent.Text = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0";
             // 
             // label6
             // 
@@ -211,11 +212,24 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Email Notification";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.linkLabel1.Location = new System.Drawing.Point(694, 413);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(97, 17);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "nokersoft.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label4);
@@ -261,6 +275,7 @@
         private System.Windows.Forms.RichTextBox useragent;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
